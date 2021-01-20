@@ -108,7 +108,7 @@ body {
 }
 
 .nav-bar {
-  flex: 0 1 350px;
+  // flex: 0 1 350px;
   display: flex;
 }
 
@@ -250,20 +250,48 @@ footer a:focus {
   //   justify-content: center;
   // }
 
-  .nav-link {
+  .header {
+    // flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .nav-bar li {
     padding: 0 0.5vw;
+    font-size: 1.4rem;
+    display: block;
+    list-style-type: none;
   }
 
   .burger-btn {
     display: inline-block;
+
   }
 
   .nav-bar {
-    flex-basis: auto;
+    display: block;
+    position: relative;
+    margin: 0;
   }
 
   .nav-list {
     display: none;
+    text-align: center;
+    position: absolute;
+    background-color: lightblue;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    top: 45px;
+  }
+
+  .nav-list.open {
+    display: block;
+  }
+
+  .nav-link {
+    display: block;
   }
 
   h1 {
@@ -298,5 +326,4 @@ footer a:focus {
   .main {
     top: 50px;
   }
-
 }
