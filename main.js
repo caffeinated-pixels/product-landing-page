@@ -10,10 +10,7 @@ $(function() {
     )
   }) // offsets anchor by 75px (size of the header) and adds in scroll animation
 
-  $('.burger-btn, .nav-link').on('click', () => handleBurger(event))
-
-  const handleBurger = event => {
-    $('.nav-list').toggleClass('open')
-    console.log('tasty burger!!!')
-  }
+  $('.burger-btn, .nav-link').on('click', event => {
+    $('.nav-list').slideToggle(200)
+  })
 }) //end of document ready
