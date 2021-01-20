@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   line-height: 1.42857143;
   font-size: 18px;
   color: white;
@@ -107,7 +107,8 @@ body {
 }
 
 .nav-bar {
-  flex-basis: 350px;
+  flex: 0 1 350px;
+  display: flex;
 }
 
 .nav-list {
@@ -127,7 +128,8 @@ body {
   text-decoration: none;
 }
 
-.nav-bar a:hover, .nav-bar a:focus {
+.nav-bar a:hover,
+.nav-bar a:focus {
   color: #b45922;
 }
 
@@ -143,7 +145,7 @@ body {
 
 h1 {
   font-size: 48px;
-  font-family: "Uncial Antiqua", "Quicksand", sans-serif;
+  font-family: 'Uncial Antiqua', 'Quicksand', sans-serif;
   font-style: italic;
   text-shadow: 2px 2px 4px #aaa;
 }
@@ -226,7 +228,8 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover, footer a:focus {
+footer a:hover,
+footer a:focus {
   color: white;
   text-decoration: underline;
 }
