@@ -82,7 +82,7 @@ body {
 }
 
 /* end of general styling classes */
-/* Start of header section styling */
+/* HEADERER SECTION STYLING start */
 .header {
   display: flex;
   align-items: center;
@@ -118,11 +118,60 @@ body {
 
 .burger-btn {
   display: none;
+  font-size: 1.8rem;
   cursor: pointer;
+  margin-right: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.burger-btn:hover, .burger-btn:focus {
+  color: #b45922;
+  text-shadow: 1px 1px 2px #1f1f1f;
+  filter: brightness(120%);
 }
 
 .nav-link {
   padding: 0 0.8vw;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0;
+  }
+  .nav-bar li {
+    padding: 0 0.5vw;
+    font-size: 1.4rem;
+    display: block;
+    list-style-type: none;
+  }
+  .burger-btn {
+    display: inline-block;
+  }
+  .nav-bar {
+    display: block;
+    position: relative;
+    margin: 0;
+  }
+  .nav-list {
+    display: none;
+    text-align: center;
+    position: absolute;
+    background-color: lightblue;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    top: 45px;
+  }
+  .nav-list.open {
+    display: block;
+  }
+  .nav-link {
+    display: block;
+  }
 }
 
 .nav-bar a {
@@ -242,41 +291,6 @@ footer a:focus {
 @media (max-width: 1024px) {
   body {
     font-size: 16px;
-  }
-  .header {
-    justify-content: space-between;
-    padding: 0;
-  }
-  .nav-bar li {
-    padding: 0 0.5vw;
-    font-size: 1.4rem;
-    display: block;
-    list-style-type: none;
-  }
-  .burger-btn {
-    display: inline-block;
-  }
-  .nav-bar {
-    display: block;
-    position: relative;
-    margin: 0;
-  }
-  .nav-list {
-    display: none;
-    text-align: center;
-    position: absolute;
-    background-color: lightblue;
-    width: 100vw;
-    padding: 0;
-    margin: 0;
-    right: 0;
-    top: 45px;
-  }
-  .nav-list.open {
-    display: block;
-  }
-  .nav-link {
-    display: block;
   }
   h1 {
     font-size: 42px;
