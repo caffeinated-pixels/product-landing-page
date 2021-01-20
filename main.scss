@@ -116,11 +116,10 @@ body {
   display: flex;
   justify-content: space-around;
   list-style: none;
-  background: lightyellow;
 }
 
 .burger-btn {
-  // display: inline;
+  display: none;
 }
 
 .nav-link {
@@ -245,13 +244,25 @@ footer a:focus {
     font-size: 16px;
   }
 
-  #header {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  // .header {
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  // }
 
   .nav-link {
     padding: 0 0.5vw;
+  }
+
+  .burger-btn {
+    display: inline-block;
+  }
+
+  .nav-bar {
+    flex-basis: auto;
+  }
+
+  .nav-list {
+    display: none;
   }
 
   h1 {
@@ -283,7 +294,8 @@ footer a:focus {
   body {
     background-size: auto;
   }
-  #main {
+  .main {
     top: 50px;
   }
+
 }
