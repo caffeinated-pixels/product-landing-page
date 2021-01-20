@@ -176,13 +176,6 @@ body {
     right: 0;
     top: 55px;
     box-shadow: 0px 8px 8px -8px #3399ff;
-    -webkit-animation: showMenu 0.5s;
-    animation: showMenu 0.5s;
-    transform-origin: top center;
-  }
-
-  .nav-list.open {
-    display: block;
   }
 
   .nav-link {
@@ -190,34 +183,18 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  /* overrides jQ inline "display: block" when enlarging screen after opening menu */
+  .nav-list {
+    display: flex !important;
+  }
+}
+
+
 .nav-bar a {
   color: #3399ff;
   font-weight: 600;
   text-decoration: none;
-
-  @-webkit-keyframes showMenu {
-    0% {
-      transform: scaleY(0);
-    }
-    80% {
-      transform: scaleY(1.2); /* creates a snapback effect */
-    }
-    100% {
-      transform: scaleY(1);
-    }
-  }
-
-  @keyframes showMenu {
-    0% {
-      transform: scaleY(0);
-    }
-    80% {
-      transform: scaleY(1.2); /* creates a snapback effect */
-    }
-    100% {
-      transform: scaleY(1);
-    }
-  }
 }
 
 .nav-bar a:hover,
