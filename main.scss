@@ -3,21 +3,34 @@ $orange-link: orange;
 $dark-grey: #1f1f1f;
 $header-blue: lightblue;
 
+@mixin mq($size) {
+  @media only screen and (max-width: $size) {
+    @content; /* lets us pass content block into mixin */
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  font-size: 1.125rem;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   line-height: 1.42857143;
-  font-size: 18px;
   color: white;
   background: url('https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg')
-    no-repeat fixed center;
+  no-repeat fixed center;
   background-size: cover;
   background-position: 50% 40px;
+
+  @include mq(480px) {
+    background-size: auto;
+  }
 }
 
 .main {
@@ -26,7 +39,7 @@ body {
   width: 100%;
 }
 
-/* start of general styling classes */
+/* Start of SHARED CLASSES*/
 .center-text {
   text-align: center;
 }
@@ -48,6 +61,9 @@ body {
   padding: 50px 50px 20px 50px;
   margin: 0 auto;
   display: flex;
+  @include mq(1024px) {
+    flex-wrap: wrap;
+  }
 }
 
 .falign-center {
@@ -70,12 +86,19 @@ body {
   margin-right: 60px;
   margin-bottom: 30px;
   flex-basis: 500px;
-  flex-grow: 0;
+  // flex-grow: 0;
+  @include mq(1024px) {
+    flex-shrink: 5;
+  }
+
 }
 
 .fbox2 {
   flex-basis: 800px;
-  flex-grow: 0;
+  // flex-grow: 0;
+  @include mq(1024px) {
+    flex-shrink: 1;
+  }
 }
 
 .fbox2 ul {
@@ -86,9 +109,9 @@ body {
   padding-left: 10px;
   margin-bottom: 25px;
 }
-/* end of general styling classes */
+/* End of SHARED CLASSES */
 
-/* HEADERER SECTION STYLING start */
+/* Start of HEADER SECTION STYLING */
 .header {
   display: flex;
   align-items: center;
@@ -98,12 +121,10 @@ body {
   z-index: 1;
   width: 100%;
   height: 75px;
-  // padding: 2px 15px 2px 5px;
   box-shadow: 0px 1px 8px #3399ff;
 }
 
 .logo {
-  // margin: 2px 5px 2px 5px;
   margin: 0 5px;
 }
 
@@ -183,13 +204,12 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
-  /* overrides jQ inline "display: block" when enlarging screen after opening menu */
+@media (min-width: 1025px) {
+  /* hack to overrides jQ inline "display: block" when enlarging screen after opening menu */
   .nav-list {
     display: flex !important;
   }
 }
-
 
 .nav-bar a {
   color: #3399ff;
@@ -201,38 +221,45 @@ body {
 .nav-bar a:focus {
   color: #b45922;
 }
-/* End of header section styling */
+/* End of HEADER SECTION STYLING */
 
-/* Start of about section styling */
+/* Start of ABOUT SECTION */
 .about {
   /* height: 400px; */
-  max-width: 800px;
+  max-width: 1200px;
   height: 100vh;
   padding: 15px;
   /* margin: 0 auto 20px auto; */
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 2.67rem;
   font-family: 'Uncial Antiqua', 'Quicksand', sans-serif;
   font-style: italic;
   text-shadow: 2px 2px 4px #aaa;
+  // @include mq(1024px) {
+  //   font-size: 80px;
+  // }
 }
+
+
 
 .heading {
   margin-bottom: 25px;
-}
 
-.heading p {
-  font-size: 32px;
+  p {
+    font-size: 2rem;
+  }
 }
 
 .blurb {
-  font-size: 22px;
+  font-size: 1.6rem;
 }
-/* End of about styling */
 
-/* Start of video section styling */
+
+/* End of ABOUT SECTION */
+
+/* Start of VIDEO SECTION */
 .demo {
   padding-bottom: 50px;
 }
@@ -256,12 +283,11 @@ h1 {
 .small-text {
   font-size: 75%;
 }
-/* End of video section styling */
+/* End of VIDEO SECTION */
 
-/* Starting of newsletter section styling */
+/* Start of NEWSLETTER SECTION */
 .form-text {
   margin-bottom: 20px;
-  /* max-width: 75%; */
 }
 
 .input-style {
@@ -281,9 +307,9 @@ h1 {
   font-weight: 600;
   cursor: pointer;
 }
-/* End of newsletter section styling */
+/* End of NEWSLETTER SECTION */
 
-/* Start of footer styling */
+/* Start of FOOTER SECTION */
 footer {
   padding: 20px;
   margin: auto;
@@ -301,44 +327,4 @@ footer a:focus {
   color: white;
   text-decoration: underline;
 }
-/* End of footer styling */
-
-/* Media breakpoints */
-@media (max-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-
-  h1 {
-    font-size: 42px;
-  }
-  .heading p {
-    font-size: 24px;
-  }
-
-  .blurb {
-    font-size: 18px;
-  }
-
-  .fcontainer {
-    flex-wrap: wrap;
-  }
-
-  .fbox1 {
-    flex-basis: 200px;
-    flex-shrink: 5;
-  }
-
-  .fbox2 {
-    flex-shrink: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    background-size: auto;
-  }
-  .main {
-    top: 50px;
-  }
-}
+/* End of FOOTER SECTION */

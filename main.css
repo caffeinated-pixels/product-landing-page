@@ -4,14 +4,24 @@
   padding: 0;
 }
 
+html {
+  font-size: 1.125rem;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   line-height: 1.42857143;
-  font-size: 18px;
   color: white;
   background: url("https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg") no-repeat fixed center;
   background-size: cover;
   background-position: 50% 40px;
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-size: auto;
+    /* lets us pass content block into mixin */
+  }
 }
 
 .main {
@@ -20,7 +30,7 @@ body {
   width: 100%;
 }
 
-/* start of general styling classes */
+/* Start of SHARED CLASSES*/
 .center-text {
   text-align: center;
 }
@@ -44,6 +54,13 @@ body {
   display: flex;
 }
 
+@media only screen and (max-width: 1024px) {
+  .fcontainer {
+    flex-wrap: wrap;
+    /* lets us pass content block into mixin */
+  }
+}
+
 .falign-center {
   align-items: center;
 }
@@ -64,12 +81,24 @@ body {
   margin-right: 60px;
   margin-bottom: 30px;
   flex-basis: 500px;
-  flex-grow: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fbox1 {
+    flex-shrink: 5;
+    /* lets us pass content block into mixin */
+  }
 }
 
 .fbox2 {
   flex-basis: 800px;
-  flex-grow: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .fbox2 {
+    flex-shrink: 1;
+    /* lets us pass content block into mixin */
+  }
 }
 
 .fbox2 ul {
@@ -81,8 +110,8 @@ body {
   margin-bottom: 25px;
 }
 
-/* end of general styling classes */
-/* HEADERER SECTION STYLING start */
+/* End of SHARED CLASSES */
+/* Start of HEADER SECTION STYLING */
 .header {
   display: flex;
   align-items: center;
@@ -170,8 +199,8 @@ body {
   }
 }
 
-@media (min-width: 1024px) {
-  /* overrides jQ inline "display: block" when enlarging screen after opening menu */
+@media (min-width: 1025px) {
+  /* hack to overrides jQ inline "display: block" when enlarging screen after opening menu */
   .nav-list {
     display: flex !important;
   }
@@ -188,18 +217,18 @@ body {
   color: #b45922;
 }
 
-/* End of header section styling */
-/* Start of about section styling */
+/* End of HEADER SECTION STYLING */
+/* Start of ABOUT SECTION */
 .about {
   /* height: 400px; */
-  max-width: 800px;
+  max-width: 1200px;
   height: 100vh;
   padding: 15px;
   /* margin: 0 auto 20px auto; */
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 2.67rem;
   font-family: 'Uncial Antiqua', 'Quicksand', sans-serif;
   font-style: italic;
   text-shadow: 2px 2px 4px #aaa;
@@ -210,15 +239,15 @@ h1 {
 }
 
 .heading p {
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .blurb {
-  font-size: 22px;
+  font-size: 1.6rem;
 }
 
-/* End of about styling */
-/* Start of video section styling */
+/* End of ABOUT SECTION */
+/* Start of VIDEO SECTION */
 .demo {
   padding-bottom: 50px;
 }
@@ -244,11 +273,10 @@ h1 {
   font-size: 75%;
 }
 
-/* End of video section styling */
-/* Starting of newsletter section styling */
+/* End of VIDEO SECTION */
+/* Start of NEWSLETTER SECTION */
 .form-text {
   margin-bottom: 20px;
-  /* max-width: 75%; */
 }
 
 .input-style {
@@ -269,8 +297,8 @@ h1 {
   cursor: pointer;
 }
 
-/* End of newsletter section styling */
-/* Start of footer styling */
+/* End of NEWSLETTER SECTION */
+/* Start of FOOTER SECTION */
 footer {
   padding: 20px;
   margin: auto;
@@ -289,38 +317,4 @@ footer a:focus {
   text-decoration: underline;
 }
 
-/* End of footer styling */
-/* Media breakpoints */
-@media (max-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-  h1 {
-    font-size: 42px;
-  }
-  .heading p {
-    font-size: 24px;
-  }
-  .blurb {
-    font-size: 18px;
-  }
-  .fcontainer {
-    flex-wrap: wrap;
-  }
-  .fbox1 {
-    flex-basis: 200px;
-    flex-shrink: 5;
-  }
-  .fbox2 {
-    flex-shrink: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    background-size: auto;
-  }
-  .main {
-    top: 50px;
-  }
-}
+/* End of FOOTER SECTION */
