@@ -119,6 +119,7 @@ body {
 
 .burger-btn {
   display: none;
+  cursor: pointer;
 }
 
 .nav-link {
