@@ -80,8 +80,8 @@ body {
   padding-left: 10px;
   margin-bottom: 25px;
 }
-
 /* end of general styling classes */
+
 /* Start of header section styling */
 #header {
   display: flex;
@@ -130,8 +130,8 @@ body {
 #nav-bar a:hover, #nav-bar a:focus {
   color: #b45922;
 }
-
 /* End of header section styling */
+
 /* Start of about section styling */
 #about {
   /* height: 400px; */
@@ -159,35 +159,34 @@ h1 {
 .blurb {
   font-size: 22px;
 }
-
 /* End of about styling */
+
 /* Start of video section styling */
 #demo {
   padding-bottom: 50px;
 }
 
 .vidbox {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* forces video to resize with 16:9 aspect! */
-  padding-top: 25px;
+	position: relative;
+	padding-bottom: 56.25%; /* forces video to resize with 16:9 aspect! */
+	padding-top: 25px;
   height: 0;
   overflow: hidden;
 }
 
 .vidbox iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .small-text {
   font-size: 75%;
 }
-
 /* End of video section styling */
+
 /* Starting of newsletter section styling */
 .form-text {
   margin-bottom: 20px;
@@ -211,8 +210,8 @@ h1 {
   font-weight: 600;
   cursor: pointer;
 }
-
 /* End of newsletter section styling */
+
 /* Start of footer styling */
 footer {
   padding: 20px;
@@ -230,36 +229,43 @@ footer a:hover, footer a:focus {
   color: white;
   text-decoration: underline;
 }
-
 /* End of footer styling */
+
 /* Media breakpoints */
 @media (max-width: 1024px) {
   body {
     font-size: 16px;
   }
+
   #header {
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .nav-link {
     padding: 0 0.5vw;
   }
+
   h1 {
     font-size: 42px;
   }
   .heading p {
     font-size: 24px;
   }
+
   .blurb {
     font-size: 18px;
   }
+
   .fcontainer {
     flex-wrap: wrap;
   }
+
   .fbox1 {
     flex-basis: 200px;
     flex-shrink: 5;
   }
+
   .fbox2 {
     flex-shrink: 1;
   }
