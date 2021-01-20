@@ -14,7 +14,7 @@ body {
   background-position: 50% 40px;
 }
 
-#main {
+.main {
   position: relative;
   top: 75px;
   width: 100%;
@@ -83,7 +83,7 @@ body {
 
 /* end of general styling classes */
 /* Start of header section styling */
-#header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,7 +106,7 @@ body {
   max-width: 100%;
 }
 
-#nav-bar {
+.nav-bar {
   flex-basis: 350px;
 }
 
@@ -121,19 +121,19 @@ body {
   padding: 0 0.8vw;
 }
 
-#nav-bar a {
+.nav-bar a {
   color: #3399ff;
   font-weight: 600;
   text-decoration: none;
 }
 
-#nav-bar a:hover, #nav-bar a:focus {
+.nav-bar a:hover, .nav-bar a:focus {
   color: #b45922;
 }
 
 /* End of header section styling */
 /* Start of about section styling */
-#about {
+.about {
   /* height: 400px; */
   max-width: 800px;
   height: 100vh;
@@ -162,7 +162,7 @@ h1 {
 
 /* End of about styling */
 /* Start of video section styling */
-#demo {
+.demo {
   padding-bottom: 50px;
 }
 
