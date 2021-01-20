@@ -3,7 +3,6 @@ $orange-link: orange;
 $dark-grey: #1f1f1f;
 $header-blue: lightblue;
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -98,13 +97,14 @@ body {
   position: fixed;
   z-index: 1;
   width: 100%;
-  min-height: 75px;
-  padding: 2px 15px 2px 5px;
+  height: 75px;
+  // padding: 2px 15px 2px 5px;
   box-shadow: 0px 1px 8px #3399ff;
 }
 
 .logo {
-  margin-right: 5px;
+  // margin: 2px 5px 2px 5px;
+  margin: 0 5px;
 }
 
 .logo img {
@@ -114,8 +114,8 @@ body {
 }
 
 .nav-bar {
-  // flex: 0 1 350px;
   display: flex;
+  margin-right: 15px;
 }
 
 .nav-list {
@@ -124,24 +124,25 @@ body {
   list-style: none;
 }
 
+.nav-link {
+  padding: 0 0.8vw;
+}
+
 .burger-btn {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
   margin-right: 10px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  &:hover, &:focus {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &:hover,
+  &:focus {
     color: $orange-text;
     text-shadow: 1px 1px 2px $dark-grey;
     filter: brightness(120%);
   }
-}
-
-.nav-link {
-  padding: 0 0.8vw;
 }
 
 @media (max-width: 1024px) {
@@ -175,7 +176,7 @@ body {
     padding: 0;
     margin: 0;
     right: 0;
-    top: 45px;
+    top: 50px;
   }
 
   .nav-list.open {
