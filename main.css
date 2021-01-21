@@ -75,6 +75,13 @@ body {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .fcontainer {
+    padding: 2.0rem 2.0rem 0.8rem;
+    /* lets us pass content block into mixin */
+  }
+}
+
 .falign-center {
   align-items: center;
 }

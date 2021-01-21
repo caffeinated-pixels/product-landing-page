@@ -74,6 +74,9 @@ body {
   @include mq(1024px) {
     flex-wrap: wrap;
   }
+  @include mq(480px) {
+    padding: 2.0rem 2.0rem 0.8rem;
+  }
 }
 
 .falign-center {
