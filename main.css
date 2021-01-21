@@ -218,13 +218,6 @@ body {
   }
 }
 
-@media (min-width: 1025px) {
-  /* hack to overrides jQ inline "display: block" when enlarging screen after opening menu */
-  .nav-list {
-    display: flex !important;
-  }
-}
-
 @media (max-width: 480px) {
   .burger-btn {
     padding-right: 0;
