@@ -10,6 +10,7 @@ $(function() {
     )
   }) // offsets anchor by 75px (size of the header) and adds in scroll animation
 
+  // the click handler adds a display style attr to .nav-list, which can cause problems when enlarging the window (i.e. the menu items dissappear!)
   $(window).resize(() => {
     if ($(window).width() > 1024) {
       $('.nav-list').removeAttr('style')
@@ -17,9 +18,9 @@ $(function() {
   })
 
   $('.burger-btn, .nav-link').on('click', event => {
-    // $('.nav-list').toggleClass('open')
     event.preventDefault()
 
+    // check window size so only executed on smaller screens
     if ($(window).width() <= 1024) {
       $('.nav-list').slideToggle(250)
     }
