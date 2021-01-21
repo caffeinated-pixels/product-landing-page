@@ -20,9 +20,6 @@ html {
   @include mq(768px) {
     font-size: 100%;
   }
-  // @include mq(480px) {
-  //   font-size: 95%;
-  // }
 }
 
 body {
@@ -180,15 +177,9 @@ body {
 
 // media query to control burger-btn & dropdown
 @media (max-width: 1024px) {
-  .logo {
-    // flex: 1;
-  }
-
   .nav-bar {
     display: block;
     position: relative;
-    // margin: 0;
-    // flex: auto;
 
     li {
       padding: 0 0.5vw;
