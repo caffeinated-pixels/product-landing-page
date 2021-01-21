@@ -26,10 +26,13 @@ body {
   font-family: 'Quicksand', sans-serif;
   line-height: 1.42857143;
   color: white;
-  background: url('https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg')
-    no-repeat fixed center;
-  background-size: cover;
-  background-position: 50% 40px;
+  background: {
+    image: url('https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg');
+    repeat: no-repeat;
+    attachment: fixed;
+    size: cover;
+    position: 50% 40px;
+  }
 
   @include mq(480px) {
     background-size: auto;
@@ -72,7 +75,7 @@ body {
     flex-wrap: wrap;
   }
   @include mq(480px) {
-    padding: 2.0rem 2.0rem 0.8rem;
+    padding: 2rem 2rem 0.8rem;
   }
 }
 
