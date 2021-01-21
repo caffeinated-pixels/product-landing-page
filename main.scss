@@ -16,7 +16,13 @@ $header-blue: lightblue;
 }
 
 html {
-  font-size: 1.125rem;
+  font-size: 112.5%;
+  @include mq(768px) {
+    font-size: 100%;
+  }
+  // @include mq(480px) {
+  //   font-size: 95%;
+  // }
 }
 
 body {
@@ -24,7 +30,7 @@ body {
   line-height: 1.42857143;
   color: white;
   background: url('https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg')
-  no-repeat fixed center;
+    no-repeat fixed center;
   background-size: cover;
   background-position: 50% 40px;
 
@@ -36,7 +42,11 @@ body {
 .main {
   position: relative;
   top: 75px;
-  width: 100%;
+  width: 100vw;
+
+  @include mq(480px) {
+    top: 25px;
+  }
 }
 
 /* Start of SHARED CLASSES*/
@@ -57,7 +67,7 @@ body {
 }
 
 .fcontainer {
-  width: 100%;
+  width: 100vw;
   padding: 50px 50px 20px 50px;
   margin: 0 auto;
   display: flex;
@@ -90,7 +100,6 @@ body {
   @include mq(1024px) {
     flex-shrink: 5;
   }
-
 }
 
 .fbox2 {
@@ -119,9 +128,13 @@ body {
   background-color: $header-blue;
   position: fixed;
   z-index: 1;
-  width: 100%;
+  width: 100vw;
   height: 75px;
   box-shadow: 0px 1px 8px #3399ff;
+  @include mq(480px) {
+    height: 50px;
+  }
+
 }
 
 .logo {
@@ -130,7 +143,7 @@ body {
 
 .logo img {
   display: block;
-  min-width: 400px;
+  // min-width: 400px;
   max-width: 100%;
 }
 
@@ -168,21 +181,22 @@ body {
 
 // media query to control burger-btn & dropdown
 @media (max-width: 1024px) {
-  .nav-bar li {
-    padding: 0 0.5vw;
-    font-size: 1.8rem;
-    display: block;
-    list-style-type: none;
-  }
-
-  .burger-btn {
-    display: inline-block;
+  .logo {
+    // flex: 1;
   }
 
   .nav-bar {
     display: block;
     position: relative;
-    margin: 0;
+    // margin: 0;
+    // flex: auto;
+
+    li {
+      padding: 0 0.5vw;
+      font-size: 1.8rem;
+      display: block;
+      list-style-type: none;
+    }
   }
 
   .nav-list {
@@ -201,6 +215,10 @@ body {
 
   .nav-link {
     display: block;
+  }
+
+  .burger-btn {
+    display: inline-block;
   }
 }
 
@@ -237,25 +255,27 @@ h1 {
   font-family: 'Uncial Antiqua', 'Quicksand', sans-serif;
   font-style: italic;
   text-shadow: 2px 2px 4px #aaa;
-  // @include mq(1024px) {
-  //   font-size: 80px;
-  // }
-}
-
-
-
-.heading {
-  margin-bottom: 25px;
-
-  p {
+  @include mq(480px) {
     font-size: 2rem;
   }
 }
 
-.blurb {
-  font-size: 1.6rem;
+.heading {
+  margin-bottom: 1.4rem;
+
+  p {
+    font-size: 2rem;
+    @include mq(480px) {
+      font-size: 1.6rem;
+    }
+  }
 }
 
+.blurb {
+  @include mq(480px) {
+    font-size: 1.2rem;
+  }
+}
 
 /* End of ABOUT SECTION */
 
