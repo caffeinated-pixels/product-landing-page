@@ -8,4 +8,4 @@ See the [product landing page in action](https://moonsorrow-industries.netlify.a
 
 ## Jan 2021
 
-I've now reworked the landing to better work on mobile displays, including adding in a responsive menu. Everyone loves a burger button!
+I've now reworked the page to better work on mobile displays, including adding in a responsive menu. Everyone loves a burger button!
