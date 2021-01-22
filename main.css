@@ -19,15 +19,28 @@ body {
   font-family: 'Quicksand', sans-serif;
   line-height: 1.42857143;
   color: white;
+}
+
+body:after {
+  /* addresses iOS issue with fixed cover background */
+  content: '';
+  position: fixed;
+  /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh;
+  /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index: -1;
+  /* needed to keep in the background */
   background-image: url("https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
   background-position: 50% 40px;
 }
 
 @media only screen and (max-width: 480px) {
-  body {
+  body:after {
     background-size: auto;
     /* lets us pass content block into mixin */
   }
