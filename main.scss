@@ -30,30 +30,29 @@ body {
 
 body:after {
   /* addresses iOS issue with fixed cover background */
-content: '';
-position: fixed; /* stretch a fixed position to the whole screen */
-top: 0;
-height: 100vh; /* fix for mobile browser address bar appearing disappearing */
-left: 0;
-right: 0;
-z-index: -1; /* needed to keep in the background */
+  content: '';
+  position: fixed; /* stretch a fixed position to the whole screen */
+  top: 0;
+  height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+  left: 0;
+  right: 0;
+  z-index: -1; /* needed to keep in the background */
 
-background: {
-  image: url('https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg');
-  repeat: no-repeat;
-  size: cover;
-  position: 50% 40px;
-}
+  background: {
+    image: url('https://thecakeisaliegaming.files.wordpress.com/2020/01/icutter-asteroid-field-03.jpg');
+    repeat: no-repeat;
+    size: cover;
+    position: 50% 40px;
+  }
 
-@include mq(480px) {
-  background-size: auto;
-}
+  @include mq(480px) {
+    background-size: auto;
+  }
 }
 
 .main {
   position: relative;
   top: 75px;
-  width: 100vw;
 
   @include mq(480px) {
     top: 25px;
@@ -78,7 +77,7 @@ background: {
 }
 
 .fcontainer {
-  width: 100vw;
+  // width: 100vw;
   padding: 2.78rem 2.78rem 1.1rem;
   margin: 0 auto;
   display: flex;
